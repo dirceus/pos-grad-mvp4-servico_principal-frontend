@@ -1,0 +1,22 @@
+<div class="container">
+
+    <mat-card>
+
+        <mat-card-content>
+            <h2>Ranking de Usuários</h2>
+
+            <table>
+                <tr>
+                    <th>Usuário</th>
+                    <th>Pontuação</th>
+                </tr>
+                <tr *ngFor="let usuario of ranking">
+                    <td>{{obterNomeUsuario(usuario.id_usuario)}}</td>
+                    <td>{{usuario.pontos}}</td>
+                </tr>
+                
+            </table>
+        </mat-card-content>
+
+    </mat-card>
+</div>

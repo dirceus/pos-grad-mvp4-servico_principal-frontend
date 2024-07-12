@@ -1,0 +1,33 @@
+<p>
+    
+
+  
+  <mat-toolbar color="primary">
+    <span class="fill-remaining-space">
+      <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
+        (mouseover)="menuTrigger.openMenu()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false">
+        <span (mouseleave)="menuTrigger.closeMenu()">
+          <button mat-menu-item>
+            <mat-icon>quiz</mat-icon>
+            <a [routerLink]="['/']">Questões</a>
+          </button>
+          <button mat-menu-item>
+            <mat-icon>workspace_premium</mat-icon>
+            <a [routerLink]="['/ranking']">Ranking</a>
+          </button>
+        </span>
+      </mat-menu>
+    </span>
+      <span>Responda Rápido App</span>
+      <span class="example-spacer"></span>
+      <div class="toolbar">
+      <div class="user-info">
+        <img src="{{path_user_logado}}"  alt="Foto do Usuário" width="40" height="40">
+        <span>Fulano</span>
+      </div>
+    </div>
+    </mat-toolbar>
+</p>

@@ -1,0 +1,99 @@
+<div class="container">
+
+  <mat-card *ngIf="showNaoHaQuestoes">
+    <div class="alert">
+      Todas as questões disponíveis foram respondidas!
+    </div>
+  </mat-card>
+
+    <mat-card *ngIf="!showNaoHaQuestoes">
+  
+      <mat-card-content *ngIf="!questao">
+        Carregando...
+      </mat-card-content>
+  
+
+      <mat-card-content *ngIf="questao && !viewResponder && respostaResponse" >
+      <div class="alert success" *ngIf="respostaResponse.resultado">
+        <strong>Parabéns!</strong> você acertou a questão.
+      </div>
+      
+      <div class="alert error" *ngIf="!respostaResponse.resultado">
+        <strong>Errou!</strong> você escolheu uma alternativa errada.
+      </div>
+      </mat-card-content>
+
+
+
+      
+
+      <mat-card-content *ngIf="questao && viewResponder" >
+  
+        <h1> Questão</h1>
+        <mat-divider></mat-divider>
+        <mat-list>
+          <mat-list-item class="horizontal-mat-list-item">
+            <span matListItemTitle>Tipo:</span>
+            <span>{{questao.tipo.descricao}}</span>
+          </mat-list-item>
+          <mat-list-item class="horizontal-mat-list-item">
+            <span matListItemTitle>Disciplina:</span>
+            <span>{{questao.disciplina.descricao}}</span>
+          </mat-list-item>
+          <mat-list-item class="horizontal-mat-list-item">
+            <span matListItemTitle>Ano:</span>
+            <span>{{questao.ano}}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span matListItemTitle>Enunciado:</span>
+            <span>{{questao.enunciado}}</span>
+          </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <mat-list>
+          <div mat-subheader>Alternativas</div>
+          <mat-radio-group [(ngModel)]="alternativaSelecioanda">
+          <mat-list-item *ngFor="let alternativa of questao.alternativas">
+            <div matListItemTitle>
+                    
+                <mat-radio-button [value]="alternativa.codigo">{{alternativa.descricao}}</mat-radio-button>
+                </div>
+          </mat-list-item>
+        </mat-radio-group>
+        </mat-list>
+        <mat-action-row>
+            <button mat-raised-button color="primary" (click)="responderQuestao()">Responder</button>
+        </mat-action-row>
+      </mat-card-content>
+     
+      <mat-card-content *ngIf="questao && !viewResponder" >
+  
+        <h1> Questão </h1>
+        <mat-divider></mat-divider>
+        <mat-list>
+          <mat-list-item>
+            <span matListItemTitle>Enunciado:</span>
+            <span>{{questao.enunciado}}</span>
+          </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <mat-list>
+          <div mat-subheader>Alternativas</div>
+          <mat-list-item *ngFor="let alternativa of questao.alternativas">
+            <mat-icon matListItemIcon *ngIf="alternativa.is_correta === true" style="color: green;">task_alt</mat-icon>
+            <mat-icon matListItemIcon *ngIf="alternativa.is_correta !== true" style="color: darkred">cancel</mat-icon>
+            <div matListItemTitle>{{alternativa.descricao}}</div>
+            <span *ngIf="alternativa.is_correta === true">(Resposta Correta)</span>
+            <span *ngIf="alternativa.is_correta !== true">(Incorreta)</span>
+          </mat-list-item>
+        </mat-list>
+        <mat-action-row>
+            <button mat-raised-button color="primary" (click)="proximaQuestao()">Próxima Questão</button>
+        </mat-action-row>
+      </mat-card-content>
+
+
+    </mat-card>
+  
+  
+  </div>
