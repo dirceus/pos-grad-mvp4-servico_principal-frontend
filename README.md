@@ -79,5 +79,4 @@ Inicie o serviço:
 
 ``` docker run -d --name servico_principal --network mvp4 -p 4200:4200 servico_principal```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
