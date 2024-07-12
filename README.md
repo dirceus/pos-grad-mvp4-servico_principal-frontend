@@ -5,12 +5,16 @@ Este é o microserviço principal (Frontend) do MVP 4 disciplina de Arquitetura 
 # Arquitetura
 
 Frontend
- - Frontend Angular 
+ - Frontend Angular
+   
 Backends
  - API de Questões
  - API de Respostas
  - API de Gameficação
- - API de Acesso
+ - API de Imagem (Externa)
+
+![image](https://github.com/user-attachments/assets/74918945-89ae-44fa-bb29-badc1761ed41)
+
 
 # Como executar os projetos usuando o Docker 
 
