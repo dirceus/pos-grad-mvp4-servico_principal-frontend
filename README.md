@@ -26,7 +26,7 @@ Crie uma rede
 
 Clone o serviço 1 (API de Questões)
 
-``` git clone ```
+``` git clone https://github.com/dirceus/pos-grad-mvp4-servico-1-questao-api.git```
 
 Acesso do diretorio onde foi baixado o serviço 1 e execute o comando:
 
@@ -40,7 +40,7 @@ Inicie o serviço:
 
 Clone o serviço 2 (API de Respostas)
 
-``` git clone ```
+``` git clone https://github.com/dirceus/pos-grad-mvp4-servico-2-responder-api.git```
 
 Acesso do diretorio onde foi baixado o serviço 2 e execute o comando:
 
@@ -52,9 +52,9 @@ Inicie o serviço:
 
 ## Executando no docker o serviço de API de Gameficação
 
-Clone o serviço 3 (API de Gameficacao)
+Clone o serviço 3 (API de Gameficação)
 
-``` git clone ```
+``` git clone https://github.com/dirceus/pos-grad-mvp4-servico-3-gameficacao-api.git```
 
 Acesso do diretorio onde foi baixado o serviço 3 e execute o comando:
 
@@ -67,6 +67,11 @@ Inicie o serviço:
 
 ## Executando o componente principal Frontend
 
+Clone o serviço principal (esse repositório)
+
+``` git clone https://github.com/dirceus/pos-grad-mvp4-servico_principal-frontend.git```
+
+Acesso do diretorio onde foi baixado o serviço principal e execute o comando:
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
