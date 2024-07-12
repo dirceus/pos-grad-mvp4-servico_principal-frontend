@@ -28,7 +28,7 @@ Clone o serviço 1 (API de Questões)
 
 ``` git clone https://github.com/dirceus/pos-grad-mvp4-servico-1-questao-api.git```
 
-Acesso do diretorio onde foi baixado o serviço 1 e execute o comando:
+Acesse o diretório onde foi baixado o serviço 1 e execute o comando:
 
 ``` docker build -t servico_1 . ```
 
@@ -42,7 +42,7 @@ Clone o serviço 2 (API de Respostas)
 
 ``` git clone https://github.com/dirceus/pos-grad-mvp4-servico-2-responder-api.git```
 
-Acesso do diretorio onde foi baixado o serviço 2 e execute o comando:
+Acesse ó diretorio onde foi baixado o serviço 2 e execute o comando:
 
 ``` docker build -t servico_2 . ```
 
@@ -56,7 +56,7 @@ Clone o serviço 3 (API de Gameficação)
 
 ``` git clone https://github.com/dirceus/pos-grad-mvp4-servico-3-gameficacao-api.git```
 
-Acesso do diretorio onde foi baixado o serviço 3 e execute o comando:
+Acesse o diretório onde foi baixado o serviço 3 e execute o comando:
 
 ``` docker build -t servico_3 . ```
 
@@ -71,7 +71,13 @@ Clone o serviço principal (esse repositório)
 
 ``` git clone https://github.com/dirceus/pos-grad-mvp4-servico_principal-frontend.git```
 
-Acesso do diretorio onde foi baixado o serviço principal e execute o comando:
+Acesse o diretorio onde foi baixado o serviço principal e execute o comando:
+
+``` docker build -t servico_principal . ```
+
+Inicie o serviço:
+
+``` docker run -d --name servico_principal --network mvp4 -p 4200:4200 servico_principal```
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
